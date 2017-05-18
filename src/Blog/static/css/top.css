@@ -1,0 +1,15 @@
+@CHARSET "UTF-8";
+
+.top-bar {
+	border-top: solid;
+	border-bottom: solid;
+	color: #aaa;
+	padding: 5px;
+	display: inline-block;
+	margin: 10px 50px;
+}
+
+.top-title {
+	padding: 50px 10em 0;
+	text-align: center;
+}

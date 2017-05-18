@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>{% block title %} {% endblock %}</title>
+
+<style type="text/css">
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+
+h1 {
+	text-align: center;
+ 	background-color: #000;
+ 	color: #fff;
+ 	padding: 10px 50px;
+	display: inline-block;
+	-moz-border-radius: 200px / 150px;
+    -webkit-border-radius: 80px / 50px;
+    border-radius: 60px / 50px;
+}
+
+h2 {
+	color: #155799;
+	/* border-top: 1px solid #D5DADA; */
+	padding-top: 5px;
+	margin-top: 2em;
+	display: none;
+}
+
+
+
+p {
+	margin: 1em 0;
+}
+
+a {
+	color: #155799;
+	text-decoration: none;
+}
+
+#rollbar {
+	background: transparent url("/static/images/common_float_block.png")
+		no-repeat scroll 0px -165px;
+	height: 28px;
+	width: 90px;
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+	width: 90px;
+	display: none;
+}
+
+.page {
+	padding: 50px;
+	text-align: center;
+	margin-top: 50px;
+	display: none;
+}
+</style>
+
+<link href="/static/css/top.css" type="text/css" rel="stylesheet">
+<link href="/static/css/content.css" type="text/css" rel="stylesheet">
+<link href="/static/css/post.css" type="text/css" rel="stylesheet">
+<script src="/static/js/jquery-3.2.1.js"></script>
+
+</head>
+<body>
+
+	<div class="top-title">
+		<h1>留       白</h1>
+	</div>
+	<div style="text-align: center; margin-top: 20px">
+		<a href="/" class="top-bar"> 首页 </a>
+		<a href="/admin" class="top-bar"> 管理 </a> 
+	</div>
+
+	{% block content %} {% endblock %}
+
+	<a id="rollbar" href="javascript:(scrollTo(0,0));" />
+
+	<script type="text/javascript">
+		var obj = document.getElementById("rollbar");
+
+		window.onscroll = function() {
+
+			var distance = document.documentElement.scrollTop
+					|| document.body.scrollTop;
+			if (distance >= 150) {
+				obj.style.display = "block";
+			} else {
+				obj.style.display = "none";
+			}
+
+		}
+	</script>
+
+
+</body>
+</html>

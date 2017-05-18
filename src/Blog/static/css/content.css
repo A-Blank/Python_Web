@@ -1,0 +1,51 @@
+@CHARSET "UTF-8";
+
+.content {
+	padding: 0 25em;
+	margin: 50px 0;
+	text-align: center;
+}
+
+.content h {
+	font-size: 25px;
+	color: black;
+}
+
+.content p {
+	text-align: left;
+	color: gray;
+	font-size: 15px;
+	margin-top: 10px;
+}
+
+.content text{
+	text-align:left;
+/* 	display: block; 
+	white-space:nowrap; */
+	font-size: 15px;
+/* 	overflow: hidden;
+	text-overflow: ellipsis; */
+}
+
+#title {
+	font-weight: bold;
+	margin: 20px;
+	position: relative;
+}
+
+#title:after {
+	content: "";
+	width: 0;
+	height: 1px;
+	margin-top:5px;
+	background: black;
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	transition: all .5s;
+}
+
+#title:hover:after {
+	left: 0%;
+	width: 100%;
+}

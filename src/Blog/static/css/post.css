@@ -1,0 +1,26 @@
+@CHARSET "UTF-8";
+
+.post{
+	padding: 0 25em;
+	margin: 50px 0;
+	text-align: center;
+}
+
+.post h{
+	font-size: 25px;
+	color: black;
+}
+
+.post time{
+	display:block;
+	text-align:left;
+	margin-top: 5px;
+	border-left: 3px solid #D5DADA;
+	padding-left: 5px;
+	color: #000;
+}
+
+.post p{
+	text-align: left;
+	font-size: 20px;
+}
